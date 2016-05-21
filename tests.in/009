@@ -1,0 +1,13 @@
+# Many levels of recursion, all using the same
+# local variable name, "x".  Interpreter should not get
+# confused about this.
+fun add5(x){ return x + 1; }
+fun add4(x){ x = x + 1; return add5(x); }
+fun add3(x){ x = x + 1; return add4(x); }
+fun add2(x){ x = x + 1; return add3(x); }
+fun add1(x){ x = x + 1; return add2(x); }
+fun add0(x){ x = x + 1; return add1(x); }
+run;
+x = add0(0);
+run;
+print x;

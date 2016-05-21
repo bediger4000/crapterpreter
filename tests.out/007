@@ -1,0 +1,15 @@
+fun myConcat (a, b) {
+return a . b;
+}
+
+fun doubleConcat (a, b, c, d) {
+s1 = myConcat(a, b);
+-> s1 = , s1;
+s2 = myConcat(c, d);
+-> s2 = , s2;
+return myConcat(s1, s2);
+}
+
+s1 = a b 
+s2 = c d 
+a b c d 

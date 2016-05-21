@@ -1,0 +1,18 @@
+# Scoping: local variables inside a function definition.
+# function l1() has formal argument named "a"
+fun l1(a) { -> "inside, a = ", a; return a + 1; }
+run;
+b = l1(1);
+run;
+print b;
+# function myConcat() has formal arguments named "a", "b"
+# Should not interfere with l1()'s argument "a".
+fun myConcat(a, b) { return a.b; }
+run;
+x = "bloop ";
+y = "floop";
+c = myConcat(x, y);
+run;
+print x;
+print y;
+print c;

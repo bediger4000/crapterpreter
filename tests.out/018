@@ -1,0 +1,18 @@
+x = 10
+y = 123
+x < y: TRUE
+x > y: FALSE
+x == y: FALSE
+!(x == y): TRUE
+x = 123
+y = 10
+x < y: FALSE
+x > y: TRUE
+x == y: FALSE
+!(x == y): TRUE
+x = 12
+y = 12
+x < y: FALSE
+x > y: FALSE
+x == y: TRUE
+!(x == y): FALSE

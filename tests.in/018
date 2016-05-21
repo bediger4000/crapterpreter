@@ -1,0 +1,23 @@
+# Check all comparison operators.
+a = 10;
+b = 123;
+run;
+fun comparisons(x, y) {
+	-> "x = ", x;
+	-> "y = ", y;
+	t =  (x < y);
+	-> "x < y: ", t;
+	t = (x > y);
+	-> "x > y: ", t;
+	t = (x == y);
+	-> "x == y: ", t;
+	t = !(x == y);
+	-> "!(x == y): ", t;
+}
+run;
+f = comparisons(a, b);
+run;
+f = comparisons(b, a);
+run;
+f = comparisons(12, 12);
+run;

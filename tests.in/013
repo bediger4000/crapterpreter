@@ -1,0 +1,6 @@
+# Try out if-statement that changes things in the true-block.
+x = 10;
+y = TRUE;
+if (y) { -> "on entry x = ", x; x = x + 1; -> "on exit, x = ", x; }
+run;
+print x;

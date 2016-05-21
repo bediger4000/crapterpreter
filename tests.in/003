@@ -1,0 +1,13 @@
+# Scoping inside and outside of function.
+a = 12;
+run;
+b = 13;
+run;
+fun abc(x) { return a+1; }
+run;
+c = abc(b);
+run;
+-> "value of a: ", a;
+-> "value of b: ", b;
+-> "value of c: ", c;
+run;

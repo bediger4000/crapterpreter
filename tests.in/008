@@ -1,0 +1,8 @@
+# Recurse on level, see that local variables
+# do not get confused one level down.
+fun add5(x){ x = x + 1; return x; }
+fun add4(x){ x = x+1; return add5(x); }
+run;
+a = add4(0);
+run;
+print a;

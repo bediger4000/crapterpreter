@@ -1,0 +1,39 @@
+#!/bin/sh
+# $Id: runtests,v 1.1 2010/03/19 03:33:21 bediger Exp $
+# Small test harness to quickly run the set of tests used to develop
+# this thing.
+
+if [ ! -x ./lng ]
+then
+	echo Compile ./lng first
+	exit 1
+fi
+
+if [ ! -d ./tests.output ]
+then
+	mkdir ./tests.output
+fi
+
+for TNAME in tests.in/[0-9][0-9][0-9]
+do
+	OUTPUT=`basename $TNAME`
+	echo "Running test $OUTPUT"
+	./lng -p < $TNAME > tests.output/$OUTPUT
+	if [ "$?" != "0" ]
+	then
+		XSTATUS=$?
+		echo Test $OUTPUT exited with non-zero status $XSTATUS
+	fi
+	DESIRED=tests.out/$OUTPUT
+	if [ -r $DESIRED ]
+	then
+		if diff $DESIRED tests.output/$OUTPUT > /dev/null
+		then
+			:
+		else
+			echo "Test $OUTPUT failed"
+		fi
+	else
+		echo "No desired output specified for $OUTPUT"
+	fi
+done

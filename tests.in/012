@@ -1,0 +1,5 @@
+# Try out if-statements.
+ if (TRUE) { -> "got here"; }
+run;
+ if (FALSE) { -> "got here"; }
+run;

@@ -1,0 +1,4 @@
+# Try out function printing.
+fun abc(x,y,z) { return x + y + z; }
+run;
+print abc;

@@ -1,0 +1,18 @@
+# Try out boolean values, and logical comparisons.
+a = TRUE;
+b = FALSE;
+c = a && b;
+run;
+print c;
+d = a || b;
+run;
+print d;
+e = !c;
+run;
+print e;
+f = !(a && b);
+run;
+print f;
+f = !(a || b);
+run;
+print f;

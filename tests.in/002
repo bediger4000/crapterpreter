@@ -1,0 +1,7 @@
+# assign, then re-assign.
+a = 1;
+run;
+print a;
+a = 2;
+run;
+print a;

@@ -1,0 +1,8 @@
+# Try out an if-statement inside a function.
+fun flop(y) { if (!y) {-> "not true"; } else { -> "true"; } }
+run;
+x = FALSE;
+x = flop(x);
+run;
+x = flop(x);
+run;

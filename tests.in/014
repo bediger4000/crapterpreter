@@ -1,0 +1,4 @@
+# This triggered a bug somewhere.
+x = FALSE;
+if (!x) {-> "not true"; }
+run;

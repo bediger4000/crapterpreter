@@ -1,0 +1,16 @@
+# Recurse one level.
+fun myConcat(a, b) { return a.b; }
+run;
+print myConcat;
+fun doubleConcat(a,b,c,d) {
+	s1 = myConcat(a,b);
+	-> "s1 = ", s1;
+	s2 = myConcat(c,d);
+	-> "s2 = ", s2;
+	return myConcat(s1, s2);
+}
+run;
+print doubleConcat;
+str = doubleConcat("a ", "b ", "c ", "d ");
+run;
+print str;

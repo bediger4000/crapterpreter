@@ -1,0 +1,7 @@
+# Try out multiplication and division operations.
+a = 2 * 3;
+run;
+print a;
+b = 10/5;
+run;
+print b;

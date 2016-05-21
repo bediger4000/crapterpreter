@@ -1,0 +1,4 @@
+# try assignment
+a = 1;
+run;
+print a;

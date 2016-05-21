@@ -1,0 +1,15 @@
+fun fact (x) {
+if (x == 1) {
+r = 1;
+} else {
+z = x - 1;
+m = fact(z);
+r = x * m;
+}return r;
+}
+
+fact(5) = 120
+fact(4) = 24
+fact(3) = 6
+fact(2) = 2
+fact(1) = 1

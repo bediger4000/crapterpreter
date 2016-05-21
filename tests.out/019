@@ -1,0 +1,19 @@
+fun fact (x) {
+if (x == 1) {
+r = 1;
+} else {
+r = x * f2(x);
+}return r;
+}
+
+fun f2 (q) {
+z = q - 1;
+m = fact(z);
+return m;
+}
+
+fact(5) = 120
+fact(4) = 24
+fact(3) = 6
+fact(2) = 2
+fact(1) = 1
